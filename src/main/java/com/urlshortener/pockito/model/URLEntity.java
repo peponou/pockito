@@ -10,6 +10,19 @@ public class URLEntity {
     private String id;
     private String originalUrl;
     private String shortId;
+    private long seq;
+
+    public long getSeq() {
+        return seq;
+    }
+
+    public void setSeq(long seq) {
+        this.seq = seq;
+    }
+
+    public URLEntity() {
+    }
+
     public URLEntity (String originalUrl) {
         this.originalUrl = originalUrl;
     }
