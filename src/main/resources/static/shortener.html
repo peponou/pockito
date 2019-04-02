@@ -20,7 +20,7 @@
 <script>
     $(document).ready(function(){
         $("button").click(function(){
-            $.post("http:/localhost:8080/shortener",
+            $.post("http://localhost:8080/shortener",
                 {
                     "originalUrl": document.getElementById("originalUrl").value
                 },
@@ -39,11 +39,10 @@
 </script>
 
 <body>
-<form>
+
     <label for="originalUrl">Originale</label>
     <input type="text" id="originalUrl" name="originalUrl">
     <button>Push it!</button>
-</form>
 
 <p id="demo"></p>
 
