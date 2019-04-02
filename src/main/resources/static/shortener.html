@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Pockito</title>
     <style>
         input[type=text] {
             width: 100%;
@@ -35,14 +35,16 @@
     function myFunction() {
         var x = document.getElementById("originalUrl").value;
         document.getElementById("demo").innerHTML = x;
+
     }
 </script>
 
 <body>
 
-    <label for="originalUrl">Originale</label>
+    <label for="originalUrl">Original</label>
     <input type="text" id="originalUrl" name="originalUrl">
-    <button>Push it!</button>
+    <button onclick="myFunction()">Short it!</button>
+
 
 <p id="demo"></p>
 
