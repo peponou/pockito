@@ -60,15 +60,15 @@ public class URLController {
     }
 
 
-//    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-//    public RedirectView redirectUrl(@PathVariable String id, HttpServletRequest request, HttpServletResponse response) throws IOException, URISyntaxException, Exception {
-//        LOGGER.info("Received shortened url to redirect: " + id);
-//        String redirectUrlString = urlConverterService.getLongURLFromID(id);
-//        LOGGER.info("Original URL: " + redirectUrlString);
-//        RedirectView redirectView = new RedirectView();
-//        redirectView.setUrl("http://" + redirectUrlString);
-//        return redirectView;
-//    }
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public RedirectView redirectUrl(@PathVariable String id, HttpServletRequest request, HttpServletResponse response) throws IOException, URISyntaxException, Exception {
+        LOGGER.info("Received shortened url to redirect: " + id);
+        String redirectUrlString = urlConverterService.getLongURLFromID(id);
+        LOGGER.info("Original URL: " + redirectUrlString);
+        RedirectView redirectView = new RedirectView();
+        redirectView.setUrl(redirectUrlString);
+        return redirectView;
+    }
 
 
     class ShortenRequest {
